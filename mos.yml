@@ -1,0 +1,28 @@
+author: Alvaro Viebrantz
+type: lib
+description: Mongoose-OS gps library
+platforms: [ esp32 ]
+version: 1.0
+
+sources:
+  - src
+
+includes:
+  - include
+
+#filesystem:
+#  - fs
+
+config_schema:
+  - ["gps", "o", { title: "GPS Settings"}]
+  - ["gps.uart_no", "i", 2, { title: "Serial port number for gps"}]    
+  - ["gps.baud_rate", "i", 9600, { title: "Serial baud rate for gps"}]    
+  - ["gps.update_interval", "i", 2000, { title: "Time between gps reads"}]
+
+tags:
+  - c
+  - hw
+  - uart
+
+# Used by the mos tool to catch mos binaries incompatible with this file format
+manifest_version: 2017-09-29
