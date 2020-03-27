@@ -39,7 +39,7 @@ char *mgos_get_location()
         speed = 0.0f;
     }
 
-    snprintf(gps_data, sizeof(gps_data), "{lat: \"%f\", lon: \"%f\", sp: \"%f\"}", lat, lon, speed);
+    snprintf(gps_data, 63, "{lat: \"%f\", lon: \"%f\", sp: \"%f\"}", lat, lon, speed);
 
     return gps_data;
 }
